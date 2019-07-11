@@ -22,6 +22,8 @@ admin.initializeApp({
 //init an instance of cloud firestore
 //use the admin module to create the instance
 const db= admin.firestore();
+const settings = { timestampsInSnapshots: true };
+db.settings(settings);
 
 //reference to the database collection
 const usersCollection= db.collection("users");
